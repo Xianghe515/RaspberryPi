@@ -50,10 +50,10 @@ class Video(QMainWindow):
         cv.imwrite(fname[0],self.capturedFrame)
         
     def quitFunction(self):
-        self.cap.release()            # 카메라와 연결을 끊음
         cv.destroyAllWindows()
         self.close()
-                
+        sys.exit()
+        
 app=QApplication(sys.argv) 
 win=Video() 
 win.show()
